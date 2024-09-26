@@ -30,6 +30,9 @@ function start() {
         time.innerText = `${minutes}:${secondes}`;
         temps = temps <= 0 ? 0 : temps - 1;
     }, 1000);
+    if(temps == 0) {
+        pause();
+    }
 }
 
 function reset() {
@@ -54,4 +57,9 @@ function pause() {
         time.innerText = `${minutes}:${secondes}`;
         tempsPause = tempsPause <= 0 ? 0 : tempsPause - 1;
     }, 1000);
+    if(tempsPause == 0) {
+        temps = minutesDepart * 60;
+        tempsPause = 300;
+        start();
+    }
 }
