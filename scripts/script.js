@@ -3,7 +3,7 @@ var y = document.getElementById("start");
 x.style.display = "none";
 y.style.display = "block";
 
-const minutesDepart = 25;
+const minutesDepart = 0.5;
 let temps = minutesDepart * 60;
 let tempsPause = 300;
 const min = minutesDepart;
@@ -23,7 +23,7 @@ function start() {
     z.style.color = "lime";
     k.style.color = "white";
 
-    setInterval(() => {
+    work = setInterval(() => {
         let secondes = parseInt(temps % 60, 10);
         let minutes = parseInt(temps / 60, 10);
         minutes = minutes < 10 ? "0" + minutes: minutes;
@@ -31,8 +31,9 @@ function start() {
         time.innerText = `${minutes}:${secondes}`;
         temps = temps <= 0 ? 0 : temps - 1;
     }, 1000);
-    
+
     if(temps == 0) {
+        clearInterval(work);
         pause();
     }
 }
@@ -52,7 +53,7 @@ function pause() {
     z.style.color = "white";
     k.style.color = "lime";
 
-    setInterval(() => {
+    p = setInterval(() => {
         let secondes = parseInt(tempsPause % 60, 10);
         let minutes = parseInt(tempsPause / 60, 10);
         minutes = minutes < 10 ? "0" + minutes: minutes;
@@ -61,7 +62,8 @@ function pause() {
         tempsPause = tempsPause <= 0 ? 0 : tempsPause - 1;
     }, 1000);
 
-    if(tempsPause == 0) {
+    if(p == 0) {
+        clearInterval(p);
         temps = minutesDepart * 60;
         tempsPause = 300;
         start();
