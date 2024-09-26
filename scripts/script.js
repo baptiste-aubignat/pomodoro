@@ -22,6 +22,7 @@ function start() {
     y.style.display = "none";
     z.style.color = "lime";
     k.style.color = "white";
+
     setInterval(() => {
         let secondes = parseInt(temps % 60, 10);
         let minutes = parseInt(temps / 60, 10);
@@ -30,6 +31,7 @@ function start() {
         time.innerText = `${minutes}:${secondes}`;
         temps = temps <= 0 ? 0 : temps - 1;
     }, 1000);
+    
     if(temps == 0) {
         pause();
     }
@@ -49,6 +51,7 @@ function pause() {
     var k = document.getElementById("pause");
     z.style.color = "white";
     k.style.color = "lime";
+
     setInterval(() => {
         let secondes = parseInt(tempsPause % 60, 10);
         let minutes = parseInt(tempsPause / 60, 10);
@@ -57,6 +60,7 @@ function pause() {
         time.innerText = `${minutes}:${secondes}`;
         tempsPause = tempsPause <= 0 ? 0 : tempsPause - 1;
     }, 1000);
+
     if(tempsPause == 0) {
         temps = minutesDepart * 60;
         tempsPause = 300;
