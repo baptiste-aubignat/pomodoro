@@ -1,7 +1,7 @@
 body {
-    background-color: #c7011a;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    background-color: #c7011a !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    text-align: center !important;
 }
 
 header {
@@ -9,9 +9,10 @@ header {
 }
 
 h1 {
-    color: white;
+    color: white !important;
     text-align: center;
-    font-size: 50px;
+    font-size: 50px !important;
+    font-weight: bold !important;
 }
 
 .container {
@@ -24,8 +25,9 @@ h1 {
     color: white;
     text-align: center;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 25px;
     box-shadow: 0px 0px 1em black;
+    padding: 12px;
 }
 
 .container p {
@@ -35,8 +37,8 @@ h1 {
 }
 
 .cercle {
-    height: 20em;
-    width: 20em;
+    height: 400px;
+    width: 400px;
     border: 2px solid white;
     border-radius: 50%;
     display: flex;
@@ -53,25 +55,25 @@ h1 {
 }
 
 button {
-    margin: auto;
-    border-radius: 50%;
-    font-size: 3rem;
-    color: transparent;
+    margin: auto !important;
+    border-radius: 50% !important;
+    font-size: 3rem !important;
+    color: transparent !important;
 }
 
 #start {
-    color: black;
+    color: white !important;
 }
 
 #reset {
-    color: black;
+    color: white !important;
 }
 
 footer {
     background-color: black;
     text-align: center;
     color: white;
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
