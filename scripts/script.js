@@ -3,7 +3,7 @@ var y = document.getElementById("start");
 x.style.display = "none";
 y.style.display = "block";
 
-const minutesDepart = 0.5;
+const minutesDepart = 25;
 let temps = minutesDepart * 60;
 let tempsPause = 300;
 const min = minutesDepart;
@@ -32,7 +32,7 @@ function start() {
         temps = temps <= 0 ? 0 : temps - 1;
     }, 1000);
 
-    if(temps == 0) {
+    if(secondes == 0 && minutes == 0) {
         clearInterval(work);
         pause();
     }
@@ -62,7 +62,7 @@ function pause() {
         tempsPause = tempsPause <= 0 ? 0 : tempsPause - 1;
     }, 1000);
 
-    if(p == 0) {
+    if(secondes == 0 && minutes == 0) {
         clearInterval(p);
         temps = minutesDepart * 60;
         tempsPause = 300;
