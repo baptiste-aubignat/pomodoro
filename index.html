@@ -16,17 +16,21 @@
         </header>
         <div class="container">
             <div class="menu">
+                <!-- Menu contenant les états "Travail" et "Pause", l'état actuel est en vert -->
                 <p id="travail">Travail</p>
                 <p id="pause">Pause</p>
             </div>
             <div class="cercle">
+                <!-- Cercle contenant le minuteur -->
                 <span id="timer"></span>
             </div>
             <div class="bouton">
                 <button type="button" class="btn" id="start" aria-label="start" onclick="start()">
+                    <!-- Bonton servant à démarrer le minuteur en appelant la fonction start(), celui-ci est désactivé quand le minuteur est en fonctionnement -->
                     <em class="fa-solid fa-play"></em>
                 </button>
                 <button type="button" class="btn" id="reset" aria-label="reset" onclick="reset()">
+                    <!-- Bouton servant à redémarrer le minuteur en appelant la fonction reset(), celui-ci est désactivé quand le minuteur n'est pas en fonctionnement -->
                     <em class="fa-solid fa-rotate-left"></em>
                 </button>
             </div>
